@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <title>Расчет стоимости ремонта</title>
+  </head>
+  <body>
+    <main class="calc__wrapper">
+      <div class="container">
+        <form class="form__wrapper" id="form">
+          <!-- heading -->
+          <div class="header">
+            <h1>Расчет стоимости ремонта</h1>
+            <h4>Базовая цена: 1 м<sup>2</sup> = 6 тыс. рублей</h4>
+          </div>
+
+          <!-- calc section -->
+          <div class="calc-section">
+            <label for="square-input">
+              <span>Площадь квартиры:</span>
+              <input
+                type="number"
+                min="0"
+                max="200"
+                value="50"
+                id="square-input"
+              />
+              <span>м<sup>2</sup></span>
+            </label>
+            <input type="range" min="0" max="200" id="square-range" />
+          </div>
+
+          <!-- Тип ремонта -->
+          <div class="calc-section">
+            <h4>Тип ремонта</h4>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="radio"
+                name="type"
+                id="radio1"
+                value="1"
+              />
+              <label for="radio1">Косметический</label>
+            </div>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="radio"
+                name="type"
+                id="radio2"
+                value="1.3"
+                checked
+              />
+              <label for="radio2"
+                >Капитальный <br /><span class="note">+30% к стоимости</span>
+              </label>
+            </div>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="radio"
+                name="type"
+                id="radio3"
+                value="1.5"
+              />
+              <label for="radio3"
+                >Под ключ <br /><span class="note">+50% к стоимости</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Тип дома -->
+          <div class="calc-section">
+            <h4>Тип дома</h4>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="radio"
+                name="building"
+                id="radio4"
+                value="1"
+              />
+              <label for="radio4">Новострой</label>
+            </div>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="radio"
+                name="building"
+                id="radio5"
+                value="1.1"
+                checked
+              />
+              <label for="radio5"
+                >Вторичка <br /><span class="note">+10% к стоимости</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Дополнительные опции -->
+          <div class="calc-section">
+            <h4>Дополнительные опции</h4>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="checkbox"
+                name="ceiling"
+                id="radio6"
+                value="1.1"
+              />
+              <label for="radio6"
+                >Натяжные потолки <br /><span class="note"
+                  >+10% к стоимости</span
+                >
+              </label>
+            </div>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="checkbox"
+                name="walls"
+                id="radio7"
+                value="1.1"
+              />
+              <label for="radio7"
+                >Покраска стен <br /><span class="note">+10% к стоимости</span>
+              </label>
+            </div>
+            <div class="radio-wrapper">
+              <input
+                class="input-range"
+                type="checkbox"
+                name="floor"
+                id="radio8"
+                value="1.1"
+              />
+              <label for="radio8"
+                >Теплый пол <br /><span class="note">+10% к стоимости</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- calc price -->
+          <div class="price-modal">
+            <h1>Стоимость ремонта:</h1>
+            <h5><span id="final-price">0 </span> рублей</h5>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer__wrapper">
+      <div class="container">
+        <ul>
+          <li>
+            <a
+              href="https://jasurbek-shomaqsudov.vercel.app/home"
+              target="_blank"
+              >Web site</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/Jasurbek2208" target="_blank">Github</a>
+          </li>
+          <li><a href="https://t.me/Joni2208" target="_blank">Telegram</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+
+  <!-- script -->
+  <script src="./js/main.js"></script>
+</html>

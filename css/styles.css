@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(26, 26, 26);
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px 16px;
+  max-width: 700px;
+}
+
+.form__wrapper > .header > h1 {
+  margin: 40px 0px 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.7rem;
+}
+
+.form__wrapper > .header > h4 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* calc section=================== */
+.calc-section {
+  padding: 40px 30px;
+  margin-top: 60px;
+  border-radius: 30px;
+  background-color: rgba(188, 198, 221, 0.336);
+}
+
+.calc-section > label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.calc-section > label > span {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.calc-section > label > input {
+  padding: 7px 0px 7px 7px;
+  max-width: 68px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: cornflowerblue;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+.calc-section > label > input:focus {
+  border-color: #fff0;
+  outline: 2px solid black;
+}
+
+.calc-section > input[type="range"] {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.calc-section > h4 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.calc-section > .radio-wrapper {
+  margin: 25px 0px 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calc-section > .radio-wrapper > label {
+  font-size: 1.2rem;
+}
+
+.calc-section > .radio-wrapper > label > span {
+  margin-left: 7px;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.calc-section > .radio-wrapper > input.input-range {
+  width: 20px;
+  height: 20px;
+}
+/* =============================== */
+
+/* price-modal */
+.price-modal {
+  padding: 28px 50px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+  background-color: #fff;
+  box-shadow: 0px -4px 10px 0px rgba(163, 200, 255, 0.521);
+}
+
+.price-modal > h5 {
+  margin-top: 17px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+/* =============================== */
+
+/* Footer */
+.footer__wrapper > .container > ul {
+  padding: 100px 0px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer__wrapper > .container > ul > li > a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgb(51, 77, 138);
+}
+/* =============================== */
+
+@media (max-width: 500px) {
+  .form__wrapper > .header > h1 {
+    font-size: 1.8rem;
+  }
+
+  .form__wrapper > .header > h4 {
+    font-size: 15px;
+  }
+
+  /* calc section */
+  .calc-section {
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+  }
+
+  .calc-section > label > span {
+    font-size: 1.2rem;
+  }
+
+  .calc-section > label > input {
+    max-width: 62px;
+    font-size: 1.2rem;
+  }
+
+  .calc-section > h4 {
+    font-size: 1.3rem;
+  }
+
+  .calc-section > .radio-wrapper {
+    margin: 20px 0px 0px 10px;
+  }
+  /* =============================== */
+
+  /* price-modal */
+  .price-modal {
+    padding: 28px 16px;
+  }
+
+  .price-modal > h1 {
+    font-size: 1.5rem;
+  }
+
+  .price-modal > h5 {
+    font-size: 1.4rem;
+  }
+  /* =============================== */
+
+  /* Footer */
+  .footer__wrapper > .container > ul {
+    flex-direction: column;
+  }
+}
