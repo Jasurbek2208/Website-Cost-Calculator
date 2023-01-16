@@ -88,6 +88,9 @@
   font-size: 1rem;
   opacity: 0.6;
 }
+.calc-section > .radio-wrapper.rooms__wrapper {
+  flex-wrap: wrap;
+}
 
 .calc-section > .radio-wrapper > .room__wrapper {
   cursor: pointer;
@@ -108,11 +111,6 @@
   width: 50px;
   height: 35px;
   opacity: 0;
-}
-
-.calc-section > .radio-wrapper > .room__wrapper > input[name="rooms"]:checked {
-  width: 20px;
-  height: 20px;
 }
 
 .calc-section > .radio-wrapper > .room__wrapper > span {
