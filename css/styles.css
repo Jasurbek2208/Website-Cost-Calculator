@@ -89,9 +89,44 @@
   opacity: 0.6;
 }
 
-.calc-section > .radio-wrapper > input.input-range {
+.calc-section > .radio-wrapper > .room__wrapper {
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid cornflowerblue;
+}
+
+.calc-section > .radio-wrapper > .room__wrapper.checked {
+  background-color: cornflowerblue;
+}
+
+.calc-section > .radio-wrapper > .room__wrapper > input[name="rooms"] {
+  cursor: pointer;
+  width: 50px;
+  height: 35px;
+  opacity: 0;
+}
+
+.calc-section > .radio-wrapper > .room__wrapper > input[name="rooms"]:checked {
   width: 20px;
   height: 20px;
+}
+
+.calc-section > .radio-wrapper > .room__wrapper > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: cornflowerblue;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.calc-section > .radio-wrapper > .room__wrapper > span.checked {
+  color: #fff;
 }
 /* =============================== */
 

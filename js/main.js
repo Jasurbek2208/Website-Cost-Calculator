@@ -7,6 +7,7 @@ const squareRange = document.querySelector('#square-range');
 // radio inputs
 const typeInputs = document.querySelectorAll('input[name="type"]');
 const buildingInputs = document.querySelectorAll('input[name="building"]');
+const roomsInputs = document.querySelectorAll('input[name="rooms"]');
 
 // checkbox inputs
 const ceilingInput = document.querySelector('input[name="ceiling"]');
@@ -22,6 +23,7 @@ let buildingPrice = 1.1;
 let ceilingPrice = 1;
 let wallsPrice = 1;
 let floorPrice = 1;
+let roomPrice = 1;
 
 squareInput.addEventListener('input', function () {
     if (squareInput.value < 0 || squareInput.value == "") {
@@ -67,6 +69,24 @@ for (const buildingInput of buildingInputs) {
     })
 }
 
+for (const roomInput of roomsInputs) {
+
+    roomInput.addEventListener('input', function () {
+
+        for (const i of roomsInputs) {
+            document.getElementsByClassName(`room__wrapper ${i.id}`)[0].classList.remove("checked");
+            document.getElementsByClassName(`span ${i.id}`)[0].classList.remove("checked");
+        }
+
+        if (roomInput.checked) {
+            roomPrice = Number(roomInput.value);
+            document.getElementsByClassName(`room__wrapper ${roomInput.id}`)[0].className += " checked";
+            document.getElementsByClassName(`span ${roomInput.id}`)[0].className += " checked";
+        }
+        calclPrice();
+    })
+}
+
 ceilingInput.addEventListener('input', function () {
     if (ceilingInput.checked) {
         ceilingPrice = 1.1;
@@ -96,7 +116,7 @@ floorInput.addEventListener('input', function () {
 
 function calclPrice() {
     let formatter = new Intl.NumberFormat("ru");
-    totalPrice = (Number(squareInput.value) * defPrice) * Number(typePrice) * Number(buildingPrice) * Number(ceilingPrice) * Number(wallsPrice) * Number(floorPrice);
+    totalPrice = (Number(squareInput.value) * defPrice) * Number(typePrice) * Number(buildingPrice) * Number(ceilingPrice) * Number(wallsPrice) * Number(floorPrice) * Number(roomPrice);
     extraPrice = 1;
     price.textContent = formatter.format(totalPrice);
 }
